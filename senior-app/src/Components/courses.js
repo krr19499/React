@@ -1,13 +1,13 @@
 import React,{Component, useState} from 'react';
-import Selector from 'react-awesome-selector'
-import 'react-awesome-selector/dist/style.css'
+//import Selector from 'react-awesome-selector'
+//import 'react-awesome-selector/dist/style.css'
 import isEmpty from "lodash/isEmpty";
-import axios from 'axios';
+//import axios from 'axios';
 import Board from 'react-trello/dist'
 import update from 'immutability-helper'
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdb-react-ui-kit";
 
-const firebase = require("firebase");
+
 const classes=[{}];
 class courses extends Component{
   
@@ -23,7 +23,7 @@ class courses extends Component{
       user:""
     };
   }
-  componentDidMount(){
+ /* componentDidMount(){
     axios.get("http://127.0.0.1:8000/api/senior/universities/californiastateuniversitynorthridge?format=json",{
       method: 'GET',
       mode: 'no-cors',
@@ -82,7 +82,7 @@ class courses extends Component{
           // No user is signed in.
         }
       });
-  }
+  }*/
 
   onDragEnd = (cardId, sourceLandId, targetLaneId, card) => {
     console.log('Calling onDragENd')
@@ -124,7 +124,7 @@ class courses extends Component{
        // onDataChange={this.updateBoard}
         handleDragEnd={this.onDragEnd}
         />
-        <MDBBtn color="primary" >Submit</MDBBtn>
+      <p color="primary" >Submit</p>
         </div>
       )
     }

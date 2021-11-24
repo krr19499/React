@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+//import '@fortawesome/fontawesome-free/css/all.min.css';
+//import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+//import 'mdbreact/dist/css/mdb.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import * as serviceWorker from './serviceWorker';
 
+
+
+/*
 const firebase= require("firebase");
 require("firebase/firestore");
 
@@ -18,7 +26,7 @@ firebase.initializeApp({
     appId: "1:775229379819:web:4e90ef4b2a3b5c9e935aae",
     measurementId: "G-TX9Z0LXYLX"
 });
-
+*/
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import { useHistory } from 'react-router-dom'
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdb-react-ui-kit";
 import ModalComponent from "./ModalComponent";
 import SignIn from "./signin";
 
-const firebase = require("firebase");
+
 
 function FormPage () {
   const history =useHistory()
@@ -26,32 +26,9 @@ function FormPage () {
         console.log("error");
         return;
     }
-
-    firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, pwd)
-    .then(authRes => {
-        const userObj ={
-            email: authRes.user.email
-        };
-        firebase
-        .firestore()
-        .collection('users')
-        .doc(email)
-        .set(userObj)
-        .then(() =>{
-            history.push('../Dashboard')
-        }, dbError =>{
-            console.log(dbError);
-            
-            
-        })
-    }, authError => {
-        console.log(authError);
-               
-    })
 }
   return (
+    
     <MDBContainer>
       <MDBRow>
         <MDBCol md="6">
@@ -86,8 +63,9 @@ function FormPage () {
           <SignIn />
         </MDBCol>
       </MDBRow>
-    </MDBContainer>
-  );
-}
+    </MDBContainer> 
+    
+  ); 
+} 
 
 export default FormPage;

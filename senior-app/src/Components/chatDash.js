@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import ChatListComponent from '../Components/chatlist/chatlist';
 import { Button, withStyles} from '@material-ui/core';
 import styles from './styles';
@@ -150,4 +150,4 @@ class chatDash extends React.Component{
 
 }
 
-export default withStyles(styles)(chatDash);
+export default withStyles(styles)(chatDash); */

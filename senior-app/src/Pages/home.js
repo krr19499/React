@@ -38,7 +38,7 @@ const divStyle={
 function SearchClasses(){
     return(
         <div style={divStyle}>
-            <Col md={{ span: 12, offset: 5 }} >
+            <Col md={{ span: 12, offset: 11 }} >
             <Navbar>
                 <Form inline>
                     <FormControl type="text" placeholder="State" className="mr-ms-2"></FormControl>

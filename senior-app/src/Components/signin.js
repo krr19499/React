@@ -1,8 +1,7 @@
 import React,{useState} from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdb-react-ui-kit";
 import { useHistory } from "react-router-dom";
 
-const firebase = require("firebase");
 
 function FormPage() {
   const history=useHistory()
@@ -19,19 +18,11 @@ function FormPage() {
   const submitLogin = (e) => {
     e.preventDefault();
 
-    firebase
-        .auth()
-        .signInWithEmailAndPassword(email, pwd)
-        .then(() => {
-            history.push('/Dashboard')
-
-        }, err => {
-            console.log(err);
-        
-        });
+    
    
 }
   return (
+    
     <MDBContainer>
       <MDBRow>
         <MDBCol>
@@ -63,6 +54,8 @@ function FormPage() {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    
+   
   );
 };
 
